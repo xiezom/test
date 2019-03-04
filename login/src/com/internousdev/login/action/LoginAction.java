@@ -1,6 +1,7 @@
 package com.internousdev.login.action;
 
 import java.sql.SQLException;
+
 import com.internousdev.login.dao.LoginDAO;
 import com.internousdev.login.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
@@ -12,18 +13,41 @@ public class LoginAction extends ActionSupport {
 
 	public String execute() throws SQLException {
 
+		/**
+		 * まずは全員エラーにする。
+		 * DAO(Data Access Object),DTO(Data Transfer Object)クラスをインスタンス化。
+		 */
 		String ret = ERROR;
 
 		LoginDAO dao = new LoginDAO();
 		LoginDTO dto = new LoginDTO();
 
+		/**
+		 *DAOの結果をDTOに入れている。
+		 *DAO…データベースとの会話するクラス
+		 *DTO…DAOでselectしたデータを格納するクラス
+		 *
+		 *☆☆鍋パで例えると！
+		 *鍋…DataBase
+		 *箸…DAO
+		 *小皿…DTO
+		 */
 		dto = dao.select(name, password);
 
+
+		/**
+		 * 条件(if…)があったときにサクセスにする
+		 * ☆☆String型を比較する時は"="ではなく"equals"☆☆
+		 */
 		if(name.equals(dto.getName())) {
 			if(password.equals(dto.getPassword())) {
 				ret = SUCCESS;
 			}
 		}
+
+		/**
+		 * 結果(ERRORかSUCCESSか)を返す
+		 */
 	 return ret;
 	}
 

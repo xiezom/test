@@ -1,0 +1,19 @@
+drop database if exists testdb;
+create database testdb;
+use testdb;
+
+create teble users2(
+user_id int primary key auto_increment,
+user_name varchar(255),
+password varchar(255)
+);
+
+insert into users2 values(1."taro","123");
+insert into users2 values(2,"jiro","456");
+insert into users2 values(3,"hanako","789");
+
+create table inquiry2(
+name varchar(255);
+qtype varvchar(255);
+body varchar(255)
+);

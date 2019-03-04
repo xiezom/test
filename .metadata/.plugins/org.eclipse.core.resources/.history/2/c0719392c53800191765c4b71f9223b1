@@ -1,0 +1,5 @@
+ackage com.intervousdev.webproj4.action;
+
+public class HelloStrutsDAO {
+
+}
