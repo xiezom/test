@@ -6,16 +6,22 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="webproj2" key="selection"/>
+		<item value="ecsite" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="template"/>
+			<item value="#"/>
+			<item value="id"/>
 			<item value="webproj3"/>
 			<item value="public"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ecsite"/>
+			<item value="."/>
+			<item value="class"/>
 			<item value="webproj2"/>
 			<item value="private"/>
 		</list>

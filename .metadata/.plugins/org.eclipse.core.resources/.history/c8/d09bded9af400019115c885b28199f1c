@@ -1,0 +1,19 @@
+package com.internousdev.template2.dao;
+
+import java.sql.Connection;
+
+import com.internousdev.template2.dto.LoginDTO;
+import com.internousdev.template2.util.DBConnector;
+
+public class LoginDAO {
+
+	public LoginDTO getLoginInfo(String loginUserId,String loginPass) {
+
+		DBConnector db = new DBConnector();
+		Connection con = db.getConnection();
+		LoginDTO loginDTO = new LoginDTO();
+
+		String sql = "select * from login_user where login_id = ? and login_pass = ?";
+	}
+
+}

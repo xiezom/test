@@ -88,7 +88,7 @@ table {
 					<s:submit value="削除" method="delete" />
 				</s:form>
 			</s:if>
-			<!-- ↓この文についてhttp://si.comp.ae.keio.ac.jp/web_app_dev_material/app/framework/framework_list/index.html -->
+
 			<s:if test="session.message != null">
 				<h3>
 					<s:property value="session.message" />
