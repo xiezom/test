@@ -15,15 +15,19 @@ public class MyPageDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
-		String sql =
-				"select ubit.id, lit.item_name,ubit.totel_price,ubit.total_count,ubit.pay,ubit.insert_date from	user_buy_item_transaction ubit left join item_info_transaction lit on ubit.item_transaction_id = lit.id where ubit.item_transaction_id = ? and ubit.user_master_id = ? order by	insert_date desc";
+		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
+				+ "FROM user_buy_item_transaction ubit "
+				+ "LEFT JOIN item_info_transaction iit "
+				+ "ON ubit.item_transaction_id = iit.id "
+				+ "WHERE ubit.item_transaction_id = ? AND ubit.user_master_id = ? "
+				+ "ORDER BY insert_date desc";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, item_transaction_id);
 			ps.setString(2, user_master_id);
 			ResultSet rs = ps.executeQuery();
 
-			if(rs.next()) {
+			while(rs.next()) {
 				MyPageDTO dto = new MyPageDTO();
 				dto.setId(rs.getString("id"));
 				dto.setItemName(rs.getString("item_name"));

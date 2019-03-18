@@ -26,12 +26,14 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		return result;
 	}
 
+
+	public Map<String, Object> getSession() {
+		return this.session;
+	}
+
 	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
 
-	public Map<String, Object> getSession() {
-		return this.session;
-	}
 }

@@ -11,7 +11,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
-	public String errorMassage;
+	public String errorMessage;
 	private Map<String, Object> session;
 
 	public String execute() {
@@ -23,13 +23,13 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 					session.put("loginPassword", loginPassword);
 					session.put("userName", userName);
 		} else {
-			setErrorMassage("未入力の項目があります。");
+			setErrorMessage("未入力の項目があります。");
 			result = ERROR;
 		}
 		return result;
 	}
 
-	public String getLogintUserId() {
+	public String getLoginUserId() {
 		return loginUserId;
 	}
 
@@ -49,7 +49,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		return userName;
 	}
 
-	public void setUerName(String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 
@@ -62,11 +62,11 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		this.session = session;
 	}
 
-	public String getErrorMassage() {
-		return errorMassage;
+	public String getErrorMessage() {
+		return errorMessage;
 	}
 
-	public void setErrorMassage(String errorMassage) {
-		this.errorMassage = errorMassage;
+	public void setErrorMessage(String errorMassage) {
+		this.errorMessage = errorMassage;
 	}
 }

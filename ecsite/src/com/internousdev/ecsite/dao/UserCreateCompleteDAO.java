@@ -7,15 +7,17 @@ import java.sql.SQLException;
 import com.internousdev.ecsite.util.DBConnector;
 import com.internousdev.ecsite.util.DateUtil;
 
-public class UserCreateCompleteDAO {
+public class UserCreateCompleteDAO{
 
 	private DateUtil dateUtil = new DateUtil();
 
-	private String sql = "insert into login_user_transaction(login_id,login_pass,user_name,insert_date) values(?,?,?,?)";
+	private String sql = "insert into login_user_transaction(login_id,login_pass,user_name,insert_date) values(?, ? ,?, ?)";
 
-	public void createUser(String loginUserId,String loginUserPassword,String userName) throws SQLException {
+	public void createUser(String loginUserId, String loginUserPassword, String userName) throws
+	SQLException {
 
 		DBConnector db = new DBConnector();
+
 		Connection con = db.getConnection();
 
 		try {
@@ -25,12 +27,12 @@ public class UserCreateCompleteDAO {
 			ps.setString(3, userName);
 			ps.setString(4, dateUtil.getDate());
 
-		} catch (SQLException e) {
+			ps.execute();
+
+		} catch(Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			con.close();
 		}
-
 	}
-
 }

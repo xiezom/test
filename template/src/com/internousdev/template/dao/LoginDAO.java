@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import com.internousdev.template.dto.LoginDTO;
 import com.internousdev.template.util.DBConnector;
 
-//LoginDAO
 public class LoginDAO {
 	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
 		DBConnector dbConnector = new DBConnector();

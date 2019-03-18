@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.sql.SQLException;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -12,17 +13,17 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
-	public Map<String,Object> session;
+	private Map<String,Object> session;
 
-	public String execute()  throws Exception{
+	public String execute() throws SQLException {
 		UserCreateCompleteDAO userCreateCompleteDAO = new UserCreateCompleteDAO();
-			userCreateCompleteDAO.createUser(session.get("loginUserId").toString(),
-					session.get("loginPassword").toString(),
-					session.get("userName").toString());
+		userCreateCompleteDAO.createUser(session.get("loginUserId").toString(),
+				session.get("loginPassword").toString(),
+				session.get("userName").toString());
 
-			String result = SUCCESS;
+		String result = SUCCESS;
 
-			return result;
+		return result ;
 	}
 
 	public String getLoginUserId() {
@@ -49,12 +50,12 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 		this.userName = userName;
 	}
 
-	public Map<String,Object> getSession() {
+	public Map<String, Object> getSession() {
 		return session;
 	}
 
 	@Override
-	public void setSession(Map<String,Object>session) {
+	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
 }
