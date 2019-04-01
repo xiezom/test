@@ -16,10 +16,10 @@ public class UserListDeleteCompleteAction extends ActionSupport {
 		UserListDeleteCompleteDAO uldcDAO = new UserListDeleteCompleteDAO();
 		int res = uldcDAO.userListDelete();
 
-		if(res > 0) {
-			setMessage("商品情報を正しく削除しました。");
+		if(res >= 1) {
+			setMessage("ユーザー情報を正しく削除しました。");
 		} else {
-			setMessage("商品情報の削除に失敗しました。");
+			setMessage("ユーザー情報の削除に失敗しました。");
 		}
 		result = SUCCESS;
 		return result;

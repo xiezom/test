@@ -12,71 +12,31 @@
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
 
-	<title>Login画面</title>
+	<title>LOGIN</title>
 
-	<style type="text/css">
-
-		body {
-			margin: 0;
-			padding: 0;
-			line-height: 1.6;
-			letter-spacing: 1px;
-			font-family: Verdana,Helvetica,sans-serif;
-			font-size: 12px;
-			color: #333;
-			background: #fff;
-		}
-
-		table {
-			text-align: center;
-			margin:0 auto;
-		}
-
-		.top {
-			width: 780px;
-			margin: 30px auto;
-			border: 1px solid #333;
-		}
-
-		.header {
-			width: 100%;
-			height: 80px;
-			background-color: black;
-		}
-
-		.main {
-			width: 100%;
-			height: 500px;
-			text-align: center;
-		}
-
-		.footer {
-			width:100%;
-			height: 80px;
-			background-color: black;
-			clear: both;
-		}
-
-		.text-link {
-			display: inline-block;
-			text-align: right;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/home_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 </head>
 <body>
 
 	<div class="header">
-		<div class="pr">
-		</div>
-	</div>
+		<h1 class="logo">BLUEKANGAROOO</h1>
+		<ul>
+            <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
+            <li><a href='<s:url action="AboutAction"/>'>ABOUT</a></li>
+            <li><a href='<s:url action="HomeAction"/>'>ITEMS</a></li>
+            <li><a href="">SHOP</a></li>
+            <li><a href='<s:url action="ContactAction"/>'>CONTACT</a></li>
+            <li><a href="">COMPANY</a></li>
+        </ul>
 
+	</div>
 	<div class="main">
 		<div class="top">
 			<p>Login</p>
 		</div>
-		<div>
+		<div class="login-form">
 			<h3>商品を購入する際はログインをお願いします。</h3>
 			<s:form action="LoginAction">
 				<s:textfield name="loginUserId"/>
@@ -94,8 +54,19 @@
 	</div>
 
 	<div class="footer">
-		<div class="pr">
-		</div>
+	<nav>
+		<ul class="social">
+			<li><a href="https://twitter.com/brue61663564" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-line fa-3x"></i></a>
+			</li>
+		</ul>
+	</nav>
+		<p class="copy"><small>&copy; BLUEKANGAROOO</small></p>
 	</div>
 
 

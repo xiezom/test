@@ -57,11 +57,6 @@
 			clear: both;
 		}
 
-		.text-right {
-			display: inline-block;
-			text-align: right;
-		}
-
 	</style>
 
 </head>
@@ -99,13 +94,9 @@
 				</s:iterator>
 			</table>
 			<s:form action="UserListDeleteConfirmAction">
-				<input type="hidden"name="deleteFlg" value="1"/>
-				<s:submit value="削除" method="delete"/>
+				<s:submit value="削除"/>
 			</s:form>
 			</s:elseif>
-			<div class="text-right">
-				<p>管理画面へ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a></p>
-			</div>
 		</div>
 	</div>
 	<div class="footer">

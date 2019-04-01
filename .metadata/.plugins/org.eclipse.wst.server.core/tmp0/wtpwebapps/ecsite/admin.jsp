@@ -49,15 +49,7 @@
 			text-align: center;
 		}
 
-		.footer {
-			width:100%;
-			height: 80px;
-			background-color: black;
-			clear: both;
-		}
-
-		.text-center {
-			display: inline-block;
+		.admin-contens {
 			text-align: center;
 		}
 
@@ -70,20 +62,28 @@
 			height: 150px;
 			display: inline-block;
 			border: 1px solid black;
-			margin-left: 600px;
-			float: left;
 		}
+
 		.users {
 			width: 150px;
 			height: 150px;
 			display: inline-block;
 			border: 1px solid black;
 			margin-left: 30px;
-			float: left;
 		}
 
 		.btn {
 			margin-bottom: 10px;
+		}
+
+		.text-center {
+			display: block;
+			text-align: center;
+		}
+		.footer {
+			width:100%;
+			height: 80px;
+			background-color: black;
 		}
 
 	</style>
@@ -100,6 +100,7 @@
 		<div class="top">
 			<p>管理者画面</p>
 		</div>
+		<div>
 		<div class="admin-contents">
 			<div class="items">
 				<p>商品</p>
@@ -118,6 +119,10 @@
 				<s:form action="UserListAction">
 					<s:submit class="btn" value="一覧"/>
 				</s:form>
+			</div>
+		</div>
+			<div class="text-center">
+				<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a></p>
 			</div>
 		</div>
 	</div>

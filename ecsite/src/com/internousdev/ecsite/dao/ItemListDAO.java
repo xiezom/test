@@ -44,4 +44,30 @@ public List<ItemListDTO> getItemList() throws SQLException {
 
 	}
 
+public ItemListDTO getItemList(String id) {
+	DBConnector dbConnector = new DBConnector();
+	Connection connection = dbConnector.getConnection();
+	ItemListDTO productInfoDTO = new ItemListDTO();
+	String sql = "select * from item_info_transaction where id=?";
+	try {
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		preparedStatement.setString(1, id);
+		ResultSet resultSet = preparedStatement.executeQuery();
+		while (resultSet.next()) {
+			productInfoDTO.setId(resultSet.getString("id"));
+			productInfoDTO.setItemName(resultSet.getString("item_name"));
+			productInfoDTO.setItemPrice(resultSet.getString("item_price"));
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}finally {
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return productInfoDTO;
+}
+
 }

@@ -14,7 +14,7 @@ public class MyPageDAO {
 			throws SQLException {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
-		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
+		ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
 		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count, ubit.pay, ubit.insert_date "
 				+ "FROM user_buy_item_transaction ubit "
 				+ "LEFT JOIN item_info_transaction iit "
@@ -35,14 +35,14 @@ public class MyPageDAO {
 				dto.setTotalCount(rs.getString("total_count"));
 				dto.setPayment(rs.getString("pay"));
 				dto.setInsert_date(rs.getString("insert_date"));
-				myPageDTO.add(dto);
+				myPageList.add(dto);
 			}
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {
 			con.close();
 		}
-		return myPageDTO;
+		return myPageList;
 	}
 
 	public int buyItemHistoryDelete(String item_transaction_id, String user_master_id)

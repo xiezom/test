@@ -14,55 +14,29 @@
 
 	<title>BuyItem画面</title>
 
-	<style type="text/css">
-
-		body {
-			margin: 0;
-			padding: 0;
-			line-height: 1.6;
-			letter-spacing: 1px;
-			font-family: Verdana,Helvetica,sans-serif;
-			font-size: 12px;
-			color: #333;
-			background: #fff;
-		}
-
-		table {
-			text-align: center;
-			margin:0 auto;
-		}
-
-		.top {
-			width: 780px;
-			margin: 30px auto;
-			border: 1px solid #333;
-		}
-
-		.header {
-			width: 100%;
-			height: 80px;
-			background-color: black;
-		}
-
-		.main {
-			width: 100%;
-			height: 500px;
-			text-align: center;
-		}
-
-		.footer {
-			width:100%;
-			height: 80px;
-			background-color: black;
-			clear: both;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/items_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 </head>
 <body>
+
 	<div class="header">
-		<div id="pr"></div>
+		<h1 class="logo">BLUEKANGAROOO</h1>
+		<ul>
+            <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
+            <li><a href='<s:url action="AboutAction"/>'>ABOUT</a></li>
+            <li><a href='<s:url action="HomeAction"/>'>ITEMS</a></li>
+            <li><a href='<s:url action="ContactAction"/>'>CONTACT</a></li>
+            <li><a href='<s:url action="GoCompanyAction"/>'>COMPANY</a></li>
+        </ul>
+	</div>
+	<div>
+    <p class="welcome">
+	        <s:property value="session.user_name"/>さん、ようこそ!
+	        <a href='<s:url action="MyCartAction"/>'>カート</a>
+	        <a href='<s:url action="MyPageAction" />'>購入履歴</a>
+	        <a href='<s:url action="LogoutAction" />'>ログアウト</a>
+    </p>
 	</div>
 	<div class="main">
 		<div class="top">
@@ -76,7 +50,7 @@
 							<span>商品名</span>
 						</td>
 						<td>
-							<s:property value="session.buyItem_name" /><br/>
+							<s:property value="item_name" /><br/>
 						</td>
 					</tr>
 					<tr>
@@ -84,7 +58,7 @@
 							<span>値段</span>
 						</td>
 						<td>
-							<s:property value="session.buyItem_price" /><span>円</span>
+							<s:property value="item_price" /><span>円</span>
 						</td>
 					</tr>
 					<tr>
@@ -104,13 +78,14 @@
 							<input type="radio" name="pay" value="2">クレジットカード
 						</td>
 					</tr>
+					<s:hidden name="Id" value="%{Id}"/>
 					<tr>
 						<td><s:submit value="購入" /></td>
 					</tr>
 				</table>
 			</s:form>
 			<div>
-				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+				<p>HOMEは<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイページは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
 			</div>
 		</div>

@@ -14,7 +14,7 @@ public class UserListDeleteCompleteDAO {
 	public int userListDelete()
 			throws SQLException {
 
-		String sql = "delete from login_user_transaction";
+		String sql = "delete from login_user_transaction where id<> '1' ";
 		PreparedStatement ps;
 		int result = 0;
 		try {

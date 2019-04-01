@@ -12,63 +12,34 @@
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
 
-	<title>HOME画面</title>
+	<title>HOME</title>
 
-	<style type="text/css">
-
-		body {
-			margin: 0;
-			padding: 0;
-			line-height: 1.6;
-			letter-spacing: 1px;
-			font-family: Verdana,Helvetica,sans-serif;
-			font-size: 12px;
-			background: #fff;
-		}
-
-		table {
-			text-align: center;
-			margin:0 auto;
-		}
-
-		.top {
-			width: 780px;
-			margin: 30px auto;
-			border: 1px solid #333;
-		}
-
-		.header {
-			width: 100%;
-			height: 80px;
-			background-color: black;
-		}
-
-		.main {
-			width: 100%;
-			height: 500px;
-			text-align: center;
-		}
-
-		.footer {
-			width:100%;
-			height: 80px;
-			background-color: black;
-			clear: both;
-		}
-
-		.text-center {
-			display: inline-block;
-			text-align: center;
-		}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="./css/home_style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
 </head>
 <body>
 
 	<div class="header">
-		<div class="pr">
-		</div>
+		<h1 class="logo">BLUEKANGAROOO</h1>
+		<ul>
+            <li><a href='<s:url action="GoHomeAction"/>'>HOME</a></li>
+            <li><a href='<s:url action="AboutAction"/>'>ABOUT</a></li>
+            <li><a href='<s:url action="HomeAction"/>'>ITEMS</a></li>
+            <li><a href='<s:url action="ContactAction"/>'>CONTACT</a></li>
+            <li><a href='<s:url action="GoCompanyAction"/>'>COMPANY</a></li>
+        </ul>
+
+	</div>
+	<div>
+    <p class="welcome">
+        <s:if test="#session.id != null">
+	        <s:property value="session.user_name"/>さん、ようこそ!
+	        <a href='<s:url action="MyCartAction"/>'>カート</a>
+	        <a href='<s:url action="MyPageAction" />'>購入履歴</a>
+	        <a href='<s:url action="LogoutAction" />'>ログアウト</a>
+        </s:if>
+    </p>
 	</div>
 
 	<div class="main">
@@ -79,21 +50,61 @@
 			<s:form action="HomeAction">
 				<s:submit value="商品購入"/>
 			</s:form>
-			<s:form action="AdminAction">
-				<s:submit value="管理者"/>
-			</s:form>
-			<s:if test="#session.id != null">
-				<p>ログアウトする場合は
-					<a href='<s:url action="LogoutAction"/>'>こちら</a></p>
-				<p>マイページは
-					<a href='<s:url action="MyPageAction"/>'>こちら</a></p>
-			</s:if>
 		</div>
+
+		<div class="main-container">
+			<div class="left">
+			<section id="New">
+
+				<div class="headin-box"><h2>New!</h2></div>
+
+				<div class="entry">
+					<p><a href='<s:url action="buyItemAction"/>'>
+					<img class="img" src="./img/1.jpg">
+					<br/>NEW!金髪
+					</a></p>
+				</div>
+
+
+				<div class="entry">
+					<p><a href='<s:url action="buyItemAction"/>'>
+					<img class="img" src="./img/2.jpg">
+					<br/>NEW!コート
+					</a></p>
+				</div>
+
+				<div class="entry">
+					<p><a href='<s:url action="buyItemAction"/>'>
+					<img class="img" src="./img/3.jpg">
+					<br/>NEW!Tシャツ(イエロー)
+					</a></p>
+				</div>
+			</section>
+
+			</div>
+			<div class="right">
+				<a class="twitter-timeline" href="https://twitter.com/brue61663564">
+				Tweets by brue61663564</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</div>
+
 	</div>
 
 	<div class="footer">
-		<div class="pr">
-		</div>
+	<nav>
+		<ul class="social">
+			<li><a href="https://twitter.com/brue61663564" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+			</li>
+			<li><a href="" target="_blank"><i class="fab fa-line fa-3x"></i></a>
+			</li>
+		</ul>
+	</nav>
+		<p class="copy"><small>&copy; BLUEKANGAROOO</small></p>
 	</div>
 
 

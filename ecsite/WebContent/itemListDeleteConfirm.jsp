@@ -81,8 +81,7 @@
 
 		<div class="btn-container">
 			<s:form action="ItemListDeleteCompleteAction">
-				<input type="hidden"name="deleteFlg" value="1"/>
-				<s:submit value="OK" method="delete"/>
+				<s:submit value="OK"/>
 			</s:form>
 			<s:form action="ItemListAction">
 				<s:submit value="キャンセル"/>

@@ -50,16 +50,16 @@
 			text-align: center;
 		}
 
+		.text-center {
+			display: inline-block;
+			text-align: center;
+		}
+
 		.footer {
 			width:100%;
 			height: 80px;
 			background-color: black;
 			clear: both;
-		}
-
-		.text-right {
-			display: inline-block;
-			text-align: right;
 		}
 
 	</style>
@@ -73,13 +73,13 @@
 		<div class="top">
 			<p>ItemList</p>
 		</div>
-				<div>
-				<s:if test="itemListDTOList == null">
+		<div>
+			<s:if test="itemListDTOList == null">
 				<h3>販売中の商品はありません。</h3>
 			</s:if>
 			<s:elseif test="message == null">
 				<h3>販売中の商品は以下になります。</h3>
-				<table border="1">
+			<table border="1">
 				<tr>
 					<th>ID</th>
 					<th>商品名</th>
@@ -102,9 +102,10 @@
 				<s:submit value="削除"/>
 			</s:form>
 			</s:elseif>
-			<div class="text-right">
-				<p>管理画面へ戻る場合は<a href='<s:url action="AdminAction"/>'>こちら</a></p>
-			</div>
+		</div>
+		<div class="text-link">
+			<p>管理画面へ戻る場合は
+				<a href='<s:url action="AdminAction"/>'>こちら</a></p>
 		</div>
 	</div>
 	<div class="footer">

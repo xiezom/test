@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:52 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 2793
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:52 +0900] "GET /ecsite/css/home_style.css HTTP/1.1" 200 3390
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:52 +0900] "GET /ecsite/img/1.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:52 +0900] "GET /ecsite/img/2.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:52 +0900] "GET /ecsite/img/3.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:59 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 2793
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:26:59 +0900] "GET /ecsite/css/home_style.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:27:00 +0900] "GET /ecsite/img/1.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:27:00 +0900] "GET /ecsite/img/2.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:27:00 +0900] "GET /ecsite/img/3.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:27:07 +0900] "GET /ecsite/HomeAction.action HTTP/1.1" 200 2306
+0:0:0:0:0:0:0:1 - - [28/Mar/2019:18:28:08 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 2793
