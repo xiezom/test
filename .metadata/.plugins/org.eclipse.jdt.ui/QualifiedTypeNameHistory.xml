@@ -21,4 +21,6 @@
 <fullyQualifiedTypeName name="com.internousdev.template2.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.template2.dto.BuyItemDTO"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.InquiryDTO"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

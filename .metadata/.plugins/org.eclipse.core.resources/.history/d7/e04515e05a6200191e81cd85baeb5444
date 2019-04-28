@@ -1,0 +1,52 @@
+package com.internousdev.ecsite.dto;
+
+import java.sql.Date;
+
+public class InquiryDTO {
+
+	private String name;
+	private String email;
+	private String phone;
+	private String qtype;
+	private String body;
+	private Date insertDate;
+
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getQtype() {
+		return qtype;
+	}
+	public void setQtype(String qtype) {
+		this.qtype = qtype;
+	}
+	public String getBody() {
+		return body;
+	}
+	public void setBody(String body) {
+		this.body = body;
+	}
+	public String getInsertDate() {
+		return inserDate;
+	public void setInsertDate(Date insertDate) {
+		this.insertDate = insertDate;
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+}
